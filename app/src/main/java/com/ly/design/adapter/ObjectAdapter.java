@@ -6,6 +6,7 @@ package com.ly.design.adapter;
  * 与类的适配器模式一样，对象的适配器模式把被适配的类的API转换成为目标类的API，
  * 与类的适配器模式不同的是，对象的适配器模式不是使用继承关系连接到Adaptee类，而是使用委派关系连接到Adaptee类。
  * 对于对象适配器，一个适配器（adaptee）可以把多种不同的源适配到同一个目标
+ *
  */
 
 public class ObjectAdapter {
