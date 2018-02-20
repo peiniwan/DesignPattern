@@ -8,7 +8,7 @@ package com.ly.design.decorator;
  * (1)在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。
  * (2)当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式
  */
-public class DecoratorExample {
+public  class DecoratorExample {
 
     /**
      * 抽象构件
@@ -20,7 +20,7 @@ public class DecoratorExample {
     /**
      * 具体构件
      */
-    class ConcreteComponent implements Component {
+    static class ConcreteComponent implements Component {
 
         @Override
         public void operation() {
@@ -31,7 +31,7 @@ public class DecoratorExample {
     /**
      * 抽象装饰类
      */
-    class Decorator implements Component {
+    static class Decorator implements Component {
         private Component component;  //维持一个对抽象构件对象的引用
 
         public Decorator(Component component) { //注入一个抽象构件类型的对象
@@ -47,7 +47,7 @@ public class DecoratorExample {
     /**
      * 具体装饰类
      */
-    class ConcreteDecoratorA extends Decorator {
+    static class ConcreteDecoratorA extends Decorator {
         public ConcreteDecoratorA(Component component) {
             super(component);
         }
@@ -65,7 +65,7 @@ public class DecoratorExample {
         }
     }
 
-    class ConcreteDecoratorB extends Decorator {
+    static class ConcreteDecoratorB extends Decorator {
         public ConcreteDecoratorB(Component component) {
             super(component);
         }
@@ -83,11 +83,11 @@ public class DecoratorExample {
     }
 
     public static void main(String[] args) {
-//        ConcreteComponent concreteComponent = new ConcreteComponent();
-//        Decorator decorator = new Decorator(concreteComponent);
-//        ConcreteDecoratorA concreteDecoratorA = new ConcreteDecoratorA(decorator);
-//        ConcreteDecoratorB concreteDecoratorB = new ConcreteDecoratorB(concreteDecoratorA);
-//        concreteDecoratorB.operation();
+        ConcreteComponent concreteComponent = new ConcreteComponent();
+        Decorator decorator = new Decorator(concreteComponent);
+        ConcreteDecoratorA concreteDecoratorA = new ConcreteDecoratorA(decorator);
+        ConcreteDecoratorB concreteDecoratorB = new ConcreteDecoratorB(concreteDecoratorA);
+        concreteDecoratorB.operation();
 
     }
 }

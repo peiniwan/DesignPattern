@@ -11,6 +11,7 @@ package com.ly.design.adapter;
  * 类适配器
  * 通过继承来实现适配器功能。
  * 对于类适配器，由于适配器直接继承了Adaptee，使得适配器不能和 Adaptee的子类一起工作
+ * 使Adaptee有了sampleOperation2（）
  */
 public class ClassAdapter {
     public interface Target {

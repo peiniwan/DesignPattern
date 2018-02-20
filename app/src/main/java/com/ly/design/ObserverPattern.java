@@ -53,6 +53,8 @@ public class ObserverPattern {
                 observer.update(newState);
             }
         }
+
+        abstract void change(String state);
     }
 
     public class ConcreteSubject extends Subject {
@@ -63,6 +65,7 @@ public class ObserverPattern {
             return state;
         }
 
+        @Override
         public void change(String newState) {
             state = newState;
             System.out.println("ConcreteSubject State:" + state);

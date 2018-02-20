@@ -104,7 +104,7 @@ public class Singleton {
         private StaticSingleton() {
         }
 
-        private static StaticSingleton getInstance() {
+        public static StaticSingleton getInstance() {
             return mSingle;
         }
     }

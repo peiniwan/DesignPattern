@@ -83,7 +83,8 @@ public class Strategy {
             if (type == BUS) {
                 return busPrice(km);
             } else if (type == SUBWAY) {
-                return taxiPrice(km);
+                return
+                        (km);
             }
             return 0;
         }
